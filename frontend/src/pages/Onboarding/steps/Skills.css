@@ -1,0 +1,91 @@
+.skill-input-group {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.skill-input-group .form-input {
+    flex: 1;
+}
+
+.btn-add-skill {
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-add-skill:hover {
+    background-color: var(--primary-hover);
+}
+
+.selected-skills,
+.popular-skills {
+    margin-top: var(--spacing-lg);
+}
+
+.skills-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.skill-chip {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--bg-tertiary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-full);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.skill-chip.selected {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.skill-chip:not(.selected):not(.disabled):hover {
+    border-color: var(--primary-color);
+    background-color: rgba(99, 102, 241, 0.1);
+}
+
+.skill-chip.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.remove-skill {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    margin-left: var(--spacing-xs);
+}
+
+.remove-skill:hover {
+    transform: scale(1.2);
+}
+
+.no-skills-message {
+    color: var(--text-tertiary);
+    font-style: italic;
+    padding: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .skill-input-group {
+        flex-direction: column;
+    }
+}
